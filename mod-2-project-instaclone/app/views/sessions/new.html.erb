@@ -1,0 +1,12 @@
+<h1>Login to Access Gram</h1>
+<% if flash[:notice] %>
+   <div style="color:red"><%= flash[:notice] %></div>
+ <% end %><br>
+<%= form_for :session, url: login_path do |f| %>
+<%= f.label :email %><br>
+<%= f.email_field :email %><br>
+<%= f.label :password %><br>
+<%= f.password_field :password %><br>
+<%= f.submit 'Login' %><br>
+<p>Brand new to Access Gram? Sign up <%= link_to 'here', new_user_path %> </p>
+<% end %>

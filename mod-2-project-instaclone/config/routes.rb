@@ -21,6 +21,12 @@ Rails.application.routes.draw do
   # get 'posts/update'
   # get 'posts/delete'
   resources :users
+  # get 'users/show'
+  # get 'users/new'
+  # get 'users/edit'
+  # get 'users/create'
+  # get 'users/update'
+  # get 'users/delete'
   root 'sessions#new'
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'

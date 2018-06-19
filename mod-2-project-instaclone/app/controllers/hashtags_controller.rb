@@ -16,4 +16,10 @@ class HashtagsController < ApplicationController
 
   def delete
   end
+
+  private
+
+  def hashtag_params
+    params.require(:hashtag).permit(:name)
+  end
 end
