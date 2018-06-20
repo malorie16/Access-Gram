@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :logged_in?, only: [:new, :create]
+  skip_before_action :require_logged_in, only: [:new, :create]
 
   def new
     render :new
@@ -21,6 +21,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :user_id
+    current_user = nil
     redirect_to login_path
   end
 

@@ -1,5 +1,11 @@
+
+
 <h1><%= @user.name %> </h1>
 
+<% if session[:id] == @user.id %>
 <%= link_to 'Edit Profile', edit_user_path(@user) %><br>
 <%= link_to 'Logout', logout_path, method: :delete %>
 <%= link_to 'Create a Post', new_post_path %>
+<% else %>
+<%= link_to 'Logout', logout_path, method: :delete %>
+<% end %>

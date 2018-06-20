@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
-  helper_method :logged_in?
-  before_action :logged_in?
+  # helper_method :logged_in?
+  # before_action :logged_in?
+  before_action :require_logged_in
+
 
   def current_user
     #byebug
@@ -13,8 +15,9 @@ class ApplicationController < ActionController::Base
     redirect_to login_path unless logged_in?
   end
 
-  def logged_in?
-    !!current_user
+  private
+  def require_logged_in
+    redirect_to controller: 'sessions', action: 'new' unless current_user
   end
 
 end
