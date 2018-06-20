@@ -6,4 +6,5 @@ class Post < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   validates :title, length: {maximum: 50}
   validates :body, length: {maximum: 100}
+  validates :title, :body, :image, presence: true
 end

@@ -1,4 +1,4 @@
-<h1>Posts#show</h1>
+<h1> <%= link_to @post.user.name, user_path(@post.user) %>  </h1>
 <p>Find me in app/views/posts/show.html.erb</p>
 <%= @post.title %>
 <%= image_tag @post.image.url(:medium) %>
