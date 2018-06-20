@@ -9,18 +9,16 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.new
   end
 
   def create
-    # @post = Post.create(title: post_params[:title], body: post_params[:body], image: post_params[:image], user_id: 1)
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.valid?
       @post.save
       redirect_to post_path(@post)
     else
-      render :new
+      redirect_to new_post_path
     end
   end
 

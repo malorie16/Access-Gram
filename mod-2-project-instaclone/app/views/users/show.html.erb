@@ -1,5 +1,5 @@
 <h1><%= @user.name %> </h1>
 
 <%= link_to 'Edit Profile', edit_user_path(@user) %><br>
-<%= button_to 'Logout', logout_path, method: :delete %>
-<%= link_to 'Create a Post', {controller: 'posts', action: 'new'} %>
+<%= link_to 'Logout', logout_path, method: :delete %>
+<%= link_to 'Create a Post', new_post_path %>
