@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   def show
+    # byebug
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -11,8 +13,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
-    redirect_to user_path
+    @post = Post.create(title: post_params[:title], body: post_params[:body], image: post_params[:image], user_id: 1)
+    redirect_to post_path(@post)
   end
 
   def update
