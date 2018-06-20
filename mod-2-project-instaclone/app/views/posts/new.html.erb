@@ -1,8 +1,8 @@
 <h1>Create a post</h1>
 <%= form_for @post do |f| %>
-  <%= f.label :title %>
+  <%= f.label 'Caption' %>
   <%= f.text_field :title %>
-  <%= f.label :body %>
+  <%= f.label 'Hashtag' %>
   <%= f.text_field :body %>
   <%= f.label :image %>
   <%= f.file_field :image %>
