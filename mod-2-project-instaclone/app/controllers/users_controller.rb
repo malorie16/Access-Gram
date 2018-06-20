@@ -3,11 +3,11 @@ class UsersController < ApplicationController
   # skip_before_action :logged_in?, only: [:new, :create]
 
   def show
-  
+
   end
 
   def new
-    @user = User.new
+    # @user = User.new
   end
 
   def create
