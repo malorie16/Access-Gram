@@ -1,15 +1,14 @@
 
+<div class="user-profile">
+<h1 class="username-left"><%= @user.name.capitalize %></h1>
+  <% if session[:user_id] == @user.id %>
+  <h3 class='edit-profile'><i class="fas fa-chess-queen"></i><%= link_to 'Edit Profile', edit_user_path(@user) %></h3>
+  <% end %>
 
-<h1><%= @user.name %> </h1>
-<% @user.posts.each do |post| %>
-<%=image_tag post.image.url(:medium) %><br>
-<%= post.title %><br>
-<% end %>
+<div class="usersPics">
+  <% @user.posts.each do |post| %>
+  <%=link_to(image_tag(post.image.url(:medium), :class => 'user_post_image'), post_path(post)) %>
+  <% end %>
+</div>
 
-<% if session[:user_id] == @user.id %>
-<%= link_to 'Edit Profile', edit_user_path(@user) %><br>
-<%= link_to 'Logout', logout_path, method: :delete %><br>
-<%= link_to 'Create a Post', new_post_path %>
-<% else %>
-<%= link_to 'Logout', logout_path, method: :delete %>
-<% end %>
+</div>

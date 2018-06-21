@@ -13,6 +13,8 @@
 
  */
 // @import 'bootstrap';
+
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -60,11 +62,10 @@ h1 {
 #signup {
   font-family: 'Valentina-Regular';
   font-size: 13px;
-
-
 }
 
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
+
 html {
   background:  url(https://i.pinimg.com/originals/25/b4/22/25b422f0a9dbbe5373d0ab13affa6a35.gif) no-repeat center center fixed;
   background-size: cover;
@@ -72,4 +73,10 @@ html {
 
 body {
     height: 100%;
+}
+
+.dropdown:hover
+
+.dropdown-content {
+  display: block;
 }

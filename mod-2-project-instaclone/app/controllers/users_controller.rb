@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
 
   def show
+    render :layout => 'users'
 
   end
 

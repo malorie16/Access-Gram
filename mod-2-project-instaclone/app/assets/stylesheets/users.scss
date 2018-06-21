@@ -1,3 +1,94 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@font-face {
+  font-family: 'Valentina-Regular';
+  src: url('/assets/Valentina-Regular.otf');
+}
+
+ul {
+    list-style-type: none;
+    padding: 25px;
+    overflow: hidden;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Valentina-Regular';
+
+}
+
+i {
+  padding: 5px;
+}
+
+li {
+  display: block;
+  padding: 10px 10px;
+  float: right;
+  color: black;
+  font-family: 'Valentina-Regular';
+  background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Valentina-Regular';
+
+
+}
+
+.username-left {
+  text-align: left;
+}
+
+.edit-profile {
+  text-align: left;
+
+}
+
+#signup {
+  font-family: 'Valentina-Regular';
+  font-size: 13px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
+
+.user-profile {
+  margin: 0 auto;
+  // border-style: solid;
+  // border-color: green;
+  width: 70%;
+    line-height: 20%;
+    }
+
+.user_post_image {
+  height: 300px;
+  width: 300px;
+}
+
+// .user-post-flex-container {
+//   display: flex;
+// }
+
+.usersPics {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // width: 70%;
+  margin: 0 auto;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  align-content: flex-start;
+}

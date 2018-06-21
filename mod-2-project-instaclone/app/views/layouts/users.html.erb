@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mod2ProjectInstaclone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <ul class='menu'>
+        <% if current_user %>
+        <li><i class="fas fa-sign-out-alt" ><%=link_to 'Logout', logout_path, method: :delete %></i></li>
+
+        <li><i class="fas fa-user-circle" ></i><%= link_to 'Profile', user_path(current_user) %></li>
+
+        <li><i class="far fa-edit" ><a href="/posts/new"></i>Create Post</a></li>
+        <% end %>
+
+        <li><i class="fas fa-home" ></i><a href="/posts">Home</a></li>
+
+      </ul>
+
+    </header>
+
+    <body>
+    <%= yield %>
+  </body>
+
+  </body>
+</html>
