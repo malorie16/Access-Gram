@@ -1,6 +1,10 @@
 <% @posts.each do |post| %>
 <%= link_to post.user.name, user_path(post.user) %><br>
 <%= image_tag post.image.url(:medium) %><br>
-<%= post.title %>
-<%= post.body %>
+<%= post.title %><br>
+<% post.hashtags.each do |hashtag|%>
+  butts
+  <%= link_to hashtag.name, hashtag_path(hashtag) %>
+<% end %>
+<br><br>
 <% end %>

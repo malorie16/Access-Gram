@@ -3,11 +3,10 @@
 <h1><%= @user.name %> </h1>
 <% @user.posts.each do |post| %>
 <%=image_tag post.image.url(:medium) %><br>
-<%= post.title %>
-<%= post.body %><br>
+<%= post.title %><br>
 <% end %>
 
-<% if session[:id] == @user.id %>
+<% if session[:user_id] == @user.id %>
 <%= link_to 'Edit Profile', edit_user_path(@user) %><br>
 <%= link_to 'Logout', logout_path, method: :delete %><br>
 <%= link_to 'Create a Post', new_post_path %>

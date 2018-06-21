@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   skip_before_action :require_logged_in, only: [:new, :create]
+  # skip_before_action :current_user, only: [:new, :create]
+  layout 'application'
 
   def new
     render :new

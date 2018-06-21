@@ -1,7 +1,7 @@
 <h1> <%= link_to @post.user.name, user_path(@post.user) %>  </h1>
-<p>Find me in app/views/posts/show.html.erb</p>
 <%= @post.title %>
+<%= link_to 'delete', post_path(@post), method: :delete %>
 <%= image_tag @post.image.url(:medium) %>
-<% @post.hashtags.each do |hashtag|%>
+<%= @post.hashtags.each do |hashtag| %>
   <%= hashtag.name %>
-  <% end %>
+<% end %>

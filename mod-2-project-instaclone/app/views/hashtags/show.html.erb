@@ -1,2 +1,5 @@
 <h1>Hashtags#show</h1>
-<p>Find me in app/views/hashtags/show.html.erb</p>
+<% @hashtag.posts.each do |post|%>
+  <%= post.title %>
+  <%= image_tag post.image.url(:medium) %>
+<% end %>

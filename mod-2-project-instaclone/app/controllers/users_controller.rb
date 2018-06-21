@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :find_params, only: [:show, :edit, :destroy, :update]
   skip_before_action :require_logged_in, only: [:new, :create]
+  layout 'pages'
 
 
   def show
@@ -9,6 +10,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    render :layout => 'application'
   end
 
   def create

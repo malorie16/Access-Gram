@@ -10,11 +10,13 @@
   <body>
     <header>
       <ul class='menu'>
-        <li><i class="fas fa-sign-out-alt" id="menu-align-right"><%=link_to 'Logout', logout_path, method: :delete %></i></li>
+        <% if current_user %>
+          <li><i class="fas fa-sign-out-alt" id="menu-align-right"><%=link_to 'Logout', logout_path, method: :delete %></i></li>
 
-        <li><i class="fas fa-user-circle" id="menu-align-right"></i><%= link_to 'Profile', user_path(session[:id]) %></li>
+          <li><i class="fas fa-user-circle" id="menu-align-right"></i><%= link_to 'Profile', user_path(current_user) %></li>
 
-        <li><i class="far fa-edit" id="menu-align-right"><a href="/posts/new"></i>Create Post</a></li>
+          <li><i class="far fa-edit" id="menu-align-right"><a href="/posts/new"></i>Create Post</a></li>
+        <% end %>
 
         <li><i class="fas fa-home" id="menu-align-right"></i><a href="/posts">Home</a></li>
 
