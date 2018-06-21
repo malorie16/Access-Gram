@@ -1,7 +1,12 @@
+<div class="user-profile">
+
 <h1> <%= link_to @post.user.name, user_path(@post.user) %>  </h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+
+<%= image_tag @post.image.url(:medium), :class => 'user_post_image' %><br><br>
 <%= @post.title %>
-<%= image_tag @post.image.url(:medium) %>
+
 <% @post.hashtags.each do |hashtag|%>
   <%= hashtag.name %>
   <% end %>
+
+</div>

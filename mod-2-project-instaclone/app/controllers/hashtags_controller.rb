@@ -3,12 +3,14 @@ class HashtagsController < ApplicationController
   end
 
   def new
+    @hashtag = Hashtag.new
   end
 
   def edit
   end
 
   def create
+    
   end
 
   def update

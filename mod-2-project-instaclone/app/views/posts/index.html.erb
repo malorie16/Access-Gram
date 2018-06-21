@@ -1,1 +1,6 @@
-# all posts with links to users
+<% @posts.each do |post| %>
+<%= link_to post.user.name, user_path(post.user) %><br>
+<%= image_tag post.image.url(:medium) %><br>
+<%= post.title %>
+<%= post.body %>
+<% end %>
