@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :find_params, only: [:show, :edit, :destroy, :update]
-  #skip_before_action :logged_in?, only: [:new, :create]
+  skip_before_action :require_logged_in, only: [:new, :create]
 
 
   def show
