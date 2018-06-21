@@ -4,11 +4,13 @@ class UsersController < ApplicationController
 
 
   def show
+    render :layout => 'users'
 
   end
 
   def new
     @user = User.new
+    render :layout => 'application'
   end
 
   def create

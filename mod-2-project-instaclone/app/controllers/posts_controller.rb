@@ -1,16 +1,18 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all 
+    @posts = Post.all
   end
 
   def show
     # byebug
     @post = Post.find(params[:id])
+    render :layout => 'post'
   end
 
   def new
     @post = Post.new
+    render :layout => 'create_post'
   end
 
   def edit
