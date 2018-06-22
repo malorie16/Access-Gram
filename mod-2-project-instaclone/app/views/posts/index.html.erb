@@ -1,0 +1,8 @@
+<div class='all-posts'>
+<% @posts.each do |post| %>
+<p class="username"><%= link_to post.user.name.capitalize, user_path(post.user) %></p><br>
+<%= image_tag post.image.url(:medium), :class => 'user_post_image' %><br>
+<div class='post-title'><%= post.title.capitalize %></div><br>
+<div class='post-body'><%= post.body %></div>
+<% end %>
+</div>
