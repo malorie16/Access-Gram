@@ -1,8 +1,14 @@
 <div class='all-posts'>
-<% @posts.each do |post| %>
-<p class="username"><%= link_to post.user.name.capitalize, user_path(post.user) %></p><br>
+<% @posts.reverse.each  do |post| %>
+<p class="username"><%= link_to post.user.name.capitalize, user_path(post.user) %></p>
+<p class='create-date'><%= post.created_at.to_time.strftime('%b %d, %Y')%></p>
+
 <%= image_tag post.image.url(:medium), :class => 'user_post_image' %><br>
-<div class='post-title'><%= post.title.capitalize %></div><br>
-</div>
+<div class='post-title'><%= post.title.capitalize %></div>
+<p class="hashtags"> <% post.hashtags.each do |hashtag| %>
+  <%= link_to hashtag.name, hashtag_path(hashtag) %>
+  <% end %> </p>
+
+
 <% end %>
 </div>

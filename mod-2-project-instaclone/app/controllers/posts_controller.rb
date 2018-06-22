@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :find_params, only: [:show, :edit, :destroy]
   layout 'pages'
 
   def index
@@ -8,7 +9,6 @@ class PostsController < ApplicationController
 
   def show
     # byebug
-    @post = Post.find(params[:id])
     render :layout => 'post'
   end
 
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    byebug
+    
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.valid?
@@ -37,9 +37,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.delete
-    redirect_to user_url
+    redirect_to user_path(current_user)
   end
 
   private
