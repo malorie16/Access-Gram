@@ -44,6 +44,7 @@ body {
 
 h1 {
   font-family: 'Valentina-Regular';
+  text-align: left;
 }
 
 #signup {
@@ -55,4 +56,32 @@ h1 {
 
 body {
     height: 100%;
+}
+
+h3 {
+  text-align: left
+}
+
+.hashtag_posts {
+  // border-style: solid;
+  // border-color: green;
+  width: 21%;
+  margin: 0 auto;
+
+}
+
+.pics {
+  // border-style: solid;
+  // border-color: red;
+
+  height: 300px;
+  width: 300px;
+
+}
+
+.post-title {
+  text-align: left;
+  font-family: 'Valentina-Regular';
+  line-height: 80%;
+
 }

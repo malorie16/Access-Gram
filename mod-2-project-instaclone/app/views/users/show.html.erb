@@ -6,7 +6,7 @@
   <% end %>
 
 <div class="usersPics">
-  <% @user.posts.each do |post| %>
+  <% @user.posts.reverse.each do |post| %>
   <%=link_to(image_tag(post.image.url(:medium), :class => 'user_post_image'), post_path(post)) %>
   <% end %>
 </div>
