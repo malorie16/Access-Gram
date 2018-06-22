@@ -1,9 +1,10 @@
 <div class="user-profile">
 
-<h1> <%= link_to @post.user.name, user_path(@post.user) %>  </h1>
+<p> <%= link_to @post.user.name.capitalize, user_path(@post.user), :class => "username" %>  </p>
+<h3 class='create-date'><%= @post.created_at.to_time.strftime('%b %d, %Y')%></h3>
 
 <%= image_tag @post.image.url(:medium), :class => 'user_post_image' %><br><br>
-<%= @post.title %>
+<div class='post-caption'><%= @post.title %></div>
 
 <% @post.hashtags.each do |hashtag|%>
   <%= hashtag.name %>

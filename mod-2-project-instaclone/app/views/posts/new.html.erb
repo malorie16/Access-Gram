@@ -1,12 +1,14 @@
+<div class="create-post">
 <h1>Create a post</h1>
+<div class="create-post-form">
 <%= form_for @post do |f| %>
-  <%= f.label 'Caption' %>
-  <%= f.text_field :title %>
-  <%= f.label 'Hashtag' %>
-  <%= f.text_field :body %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-  <%= f.submit 'Create Post' %>
-
+  <div class="form-label"><%= f.label 'Caption' %><br></div>
+  <div class="text-field"><%= f.text_field :title %><br></div>
+  <div class="form-label"><%= f.label 'Hashtag' %><br></div>
+  <div class="text-field"><%= f.text_field :body %><br></div>
+  <div class="form-label"><%= f.label :image %><br></div>
+  <div class="file-field"><%= f.file_field :image %><br></div>
+  <div class="submit-button"><%= f.submit 'Create Post' %></div>
 <% end %>
-<%= link_to 'Back to profile', user_path(session[:user_id]) %>
+</div>
+</div>

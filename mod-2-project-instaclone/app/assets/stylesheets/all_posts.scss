@@ -49,12 +49,29 @@ h1 {
 
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
 
-body {
-    height: 100%;
+.all-posts {
+  // border-style: solid;
+  // border-color: blue;
+  width: 22%;
+  margin: 0 auto;
 }
 
-.dropdown:hover
+.user_post_image {
+  height: 300px;
+  width: 300px;
+}
 
-.dropdown-content {
-  display: block;
+.username {
+  font-size: 2em;
+  text-align: left;
+}
+
+.post-title {
+  text-align: left;
+
+}
+
+.post-body {
+  text-align: left;
+
 }

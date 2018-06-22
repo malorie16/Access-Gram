@@ -1,5 +1,7 @@
 class HashtagsController < ApplicationController
   def show
+    @hashtag = Hashtag.find(params[:id])
+    render :layout => 'hashtag_posts'
   end
 
   def new
@@ -10,6 +12,7 @@ class HashtagsController < ApplicationController
   end
 
   def create
+
   end
 
   def update

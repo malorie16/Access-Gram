@@ -12,6 +12,7 @@ Rails.application.config.assets.precompile += %w( all_posts.css )
 Rails.application.config.assets.precompile += %w( create_post.css )
 Rails.application.config.assets.precompile += %w( change_password.css )
 Rails.application.config.assets.precompile += %w( post.css )
+Rails.application.config.assets.precompile += %w( hashtag_posts.css )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets

@@ -1,2 +1,7 @@
-<h1>Hashtags#show</h1>
-<p>Find me in app/views/hashtags/show.html.erb</p>
+<div class="all-hashtag-posts">
+<p class="hashtag-name"><%= @hashtag.name %></p>
+<% @hashtag.posts.each do |post| %>
+<%= post.user.name.capitalize %>
+<%=link_to(image_tag(post.image.url(:medium), :class => 'user_post_image'), user_path(post.user)) %>
+<% end %>
+</div>
