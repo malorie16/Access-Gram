@@ -3,7 +3,6 @@
 <%= image_tag post.image.url(:medium) %><br>
 <%= post.title %><br>
 <% post.hashtags.each do |hashtag|%>
-  butts
   <%= link_to hashtag.name, hashtag_path(hashtag) %>
 <% end %>
 <br><br>

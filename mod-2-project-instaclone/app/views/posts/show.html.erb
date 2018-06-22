@@ -5,6 +5,6 @@
 <%= link_to 'delete', post_path(@post), method: :delete %>
 <%= image_tag @post.image.url(:medium), :class => 'user_post_image' %><br><br>
 <%= @post.title %>
-<%= @post.hashtags.each do |hashtag| %>
-  <%= hashtag.name %>
+<% @post.hashtags.each do |hashtag| %>
+  <%= link_to hashtag.name, hashtag_path(hashtag) %>
 <% end %>
