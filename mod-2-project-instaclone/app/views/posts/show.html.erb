@@ -1,5 +1,15 @@
 <div class="user-profile">
 
+<<<<<<< HEAD
+<h1> <%= link_to @post.user.name, user_path(@post.user) %>  </h1>
+<%= @post.title %>
+<%= link_to 'delete', post_path(@post), method: :delete %>
+<%= image_tag @post.image.url(:medium), :class => 'user_post_image' %><br><br>
+<%= @post.title %>
+<% @post.hashtags.each do |hashtag| %>
+  <%= link_to hashtag.name, hashtag_path(hashtag) %>
+<% end %>
+=======
 <p> <%= link_to @post.user.name.capitalize, user_path(@post.user), :class => "username" %>  </p>
 <h3 class='create-date'><%= @post.created_at.to_time.strftime('%b %d, %Y')%></h3>
 
@@ -11,3 +21,4 @@
   <% end %>
 
 </div>
+>>>>>>> 325821676f79754320f5324739640b8a5233bde7

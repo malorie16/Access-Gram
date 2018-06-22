@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  layout 'pages'
 
   def index
     @posts = Post.all
@@ -20,12 +21,14 @@ class PostsController < ApplicationController
   end
 
   def create
+    byebug
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.valid?
       @post.save
       redirect_to post_path(@post)
     else
+      flash[:error] = @post.errors.full_messages
       redirect_to new_post_path
     end
   end
@@ -33,7 +36,10 @@ class PostsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    @post = Post.find(params[:id])
+    @post.delete
+    redirect_to user_url
   end
 
   private
@@ -41,7 +47,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+
   def post_params
-    params.require(:post).permit(:title, :body, :image)
+    params.require(:post).permit(:title, :change_to_hashtag, :image)
   end
 end

@@ -1,0 +1,56 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@font-face {
+  font-family: 'Valentina-Regular';
+  src: url('/assets/Valentina-Regular.otf');
+}
+
+ul {
+    list-style-type: none;
+    padding: 25px;
+    overflow: hidden;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Valentina-Regular';
+
+}
+
+i {
+  padding: 5px;
+}
+
+li {
+  display: block;
+  padding: 10px 10px;
+  float: right;
+  color: black;
+  font-family: 'Valentina-Regular';
+  background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Valentina-Regular';
+}
+
+#signup {
+  font-family: 'Valentina-Regular';
+  font-size: 13px;
+
+
+}
+
+
+
+body {
+    height: 100%;
+}

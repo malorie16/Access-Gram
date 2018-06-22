@@ -1,5 +1,22 @@
 <div class="create-post">
 <h1>Create a post</h1>
+<<<<<<< HEAD
+<% if flash[:error] %>
+  <% flash[:error].each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+
+<%= form_for @post do |f| %>
+  <%= f.label 'Caption' %>
+  <%= f.text_field :title %>
+  <%= f.label 'Hashtag' %>
+  <%= f.text_field :change_to_hashtag %>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.submit 'Create Post' %>
+
+=======
 <div class="create-post-form">
 <%= form_for @post do |f| %>
   <div class="form-label"><%= f.label :image %><br></div>
@@ -9,6 +26,7 @@
   <div class="form-label"><%= f.label 'Hashtag' %><br></div>
   <div class="text-field"><%= f.text_field :body %><br></div>
   <div class="submit-button"><%= f.submit 'Create Post' %></div>
+>>>>>>> 325821676f79754320f5324739640b8a5233bde7
 <% end %>
 </div>
 </div>
