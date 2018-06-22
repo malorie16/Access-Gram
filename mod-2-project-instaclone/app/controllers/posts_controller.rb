@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    render :layout => 'all_posts'
   end
 
   def show

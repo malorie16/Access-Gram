@@ -1,9 +1,8 @@
+<div class='all-posts'>
 <% @posts.each do |post| %>
-<%= link_to post.user.name, user_path(post.user) %><br>
-<%= image_tag post.image.url(:medium) %><br>
-<%= post.title %><br>
-<% post.hashtags.each do |hashtag|%>
-  <%= link_to hashtag.name, hashtag_path(hashtag) %>
+<p class="username"><%= link_to post.user.name.capitalize, user_path(post.user) %></p><br>
+<%= image_tag post.image.url(:medium), :class => 'user_post_image' %><br>
+<div class='post-title'><%= post.title.capitalize %></div><br>
+<div class='post-body'><%= post.body %></div>
 <% end %>
-<br><br>
-<% end %>
+</div>

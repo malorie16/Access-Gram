@@ -4,6 +4,8 @@
 @font-face {
   font-family: 'Valentina-Regular';
   src: url('/assets/Valentina-Regular.otf');
+  font-family: 'Champagne & Limousines';
+  src: url('/assets/Champagne & Limousines.ttf');
 }
 
 ul {
@@ -34,9 +36,7 @@ li {
 
 }
 
-body {
-  text-align: center;
-}
+
 
 h1 {
   font-family: 'Valentina-Regular';
@@ -63,5 +63,22 @@ body {
   margin: 0 auto;
   // border-style: solid;
   // border-color: green;
-  width: 70%;
+  width: 20%;
     }
+
+.create-date {
+  font-family: 'Champagne & Limousines';
+  line-height: 80%;
+  text-align: left;
+  font-size: 15px;
+}
+
+.username {
+  font-family: 'Valentina-Regular';
+  text-align: left;
+  font-size: 2em;
+}
+
+.post-caption {
+   text-align: left;
+}
