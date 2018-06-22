@@ -1,4 +1,4 @@
-class Post < ApplicationRecord
+ class Post < ApplicationRecord
   belongs_to :user
   has_many :post_hashtags
   has_many :hashtags, through: :post_hashtags
@@ -10,8 +10,9 @@ class Post < ApplicationRecord
 
 
   def change_to_hashtag=(string)
-    hashtags = string_split(string).map do |ht|
-     Hashtag.find_or_create_by(name: ('#' + ht))
+    hashtags = string_split(string).map do |word|
+
+     Hashtag.find_or_create_by(name: add_a_hashtag(word))
    end
     self.hashtags = hashtags
   end
@@ -22,5 +23,13 @@ class Post < ApplicationRecord
 
   def string_split(string)
     arr = string.split(' ')
+  end
+
+  def add_a_hashtag(str)
+    if str.include?('#')
+      str
+    else
+      '#'+ str
+    end
   end
 end
