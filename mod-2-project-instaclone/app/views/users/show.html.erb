@@ -1,2 +1,14 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<div class="user-profile">
+<h1 class="username-left"><%= @user.name.capitalize %></h1>
+  <% if session[:user_id] == @user.id %>
+  <h3 class='edit-profile'><i class="fas fa-chess-queen"></i><%= link_to 'Edit Profile', edit_user_path(@user) %></h3>
+  <% end %>
+
+<div class="usersPics">
+  <% @user.posts.each do |post| %>
+  <%=link_to(image_tag(post.image.url(:medium), :class => 'user_post_image'), post_path(post)) %>
+  <% end %>
+</div>
+
+</div>
