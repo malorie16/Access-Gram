@@ -16,7 +16,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    byebug
     if @user.valid?
       @user.save
       redirect_to user_path(@user)
@@ -26,6 +25,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    render :layout => 'update_profile'
   end
 
   def update

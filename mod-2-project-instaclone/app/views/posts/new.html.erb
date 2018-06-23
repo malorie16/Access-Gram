@@ -1,3 +1,4 @@
+<div class="create-post">
 <h1>Create a post</h1>
 
 <% if flash[:error] %>
@@ -14,7 +15,9 @@
   <div class="text-field"><%= f.text_field :title %><br></div>
   <div class="form-label"><%= f.label 'Hashtag' %><br></div>
   <div class="text-field"><%= f.text_field :change_to_hashtag %><br></div>
-  <div class="submit-button"><%= f.submit 'Create Post' %></div>
+  <div class="submit-button"><%= f.submit 'Create Post' %>
+  </div>
 
 <% end %>
 <%= link_to 'Back to profile', user_path(session[:user_id]) %>
+</div>

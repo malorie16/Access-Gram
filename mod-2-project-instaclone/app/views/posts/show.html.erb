@@ -1,14 +1,14 @@
+<div class="user-profile">
 
-
-  <p> <%= link_to @post.user.name.capitalize, user_path(@post.user), :class => "username" %>  </p>
+  <p> <%= link_to @post.user.name.titleize, user_path(@post.user), :class => "username" %>  </p>
   <h3 class='create-date'><%= @post.created_at.to_time.strftime('%b %d, %Y')%></h3>
 
   <%= image_tag @post.image.url(:medium), :class => 'user_post_image' %><br><br>
-  <div class='post-caption'><%= @post.title.capitalize %></div>
+  <div class='post-caption'><%= @post.title %></div>
 
   <% @post.hashtags.each do |hashtag|%>
   <%= link_to hashtag.name, hashtag_path(hashtag) %>
-  <% end %><br>
+  <% end %><br><br>
 
   <% if session[:user_id] == @post.user.id %>
   <%= link_to 'Delete this post', @post, method: :delete %>
