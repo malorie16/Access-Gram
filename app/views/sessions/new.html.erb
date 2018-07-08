@@ -1,3 +1,4 @@
+<div class="login">
 <h1>Login to Access Gram</h1>
 <% if flash[:notice] %>
    <div style="color:red"><%= flash[:notice] %></div>
@@ -10,3 +11,4 @@
 <%= f.submit 'Login' %><br>
 <p id= "signup">Brand new to Access Gram?<br> Sign up <%= link_to 'here', new_user_path %> </p>
 <% end %>
+</div>

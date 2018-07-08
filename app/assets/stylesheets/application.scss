@@ -23,6 +23,7 @@
 }
 
 ul {
+
     list-style-type: none;
     padding: 25px;
     overflow: hidden;
@@ -59,6 +60,7 @@ h1 {
 }
 
 #signup {
+
   font-family: 'Valentina-Regular';
   font-size: 13px;
 }
@@ -72,4 +74,9 @@ html {
 
 body {
     height: 100%;
+}
+
+.login {
+  padding-top: 100px;
+
 }
