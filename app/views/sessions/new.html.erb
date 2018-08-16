@@ -2,7 +2,7 @@
 <h1>Login to Access Gram</h1>
 <% if flash[:notice] %>
    <div style="color:red"><%= flash[:notice] %></div>
- <% end %><br>
+ <% end %>
 <%= form_for :session, url: login_path do |f| %>
 <%= f.label :email %><br>
 <%= f.email_field :email %><br>
