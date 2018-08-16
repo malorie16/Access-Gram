@@ -1,24 +1,7 @@
-# README
+# Access Gram
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the beginning of a social media site based on Instagram!
 
-Things you may want to cover:
+Create an account to upload pictures with captions and hashtags. Browse your home page to check out other user's posts! Feel free to edit or delete your account if you change your mind about Access Gram!
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Created by Malorie Casimir and Jathmel Gordon for our Mod 2 Project at The Flatiron School's Access Labs //
